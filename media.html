@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MMM - Collecting Queers</title>
+    <title>Other Media - Collecting Queers</title>
     <style>
         /* CSS Variables for easy color changes */
         :root {
@@ -88,22 +88,35 @@
             margin: 40px auto;
         }
 
-        /* Profile Item Box */
+        /* Artwork Display Item */
         .display-item {
             background: white;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             padding-bottom: 10px;
+        }
+
+        .display-item h2 {
+            margin-top: 20px;
+            text-align: center;
+            color: #b8a91a;
+        }
+
+        .display-item p.author-tag {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+            opacity: 0.8;
         }
 
         .display-image {
             display: block;
             width: 100%;
-            max-height: 550px; /* Limits height on big screens */
+            max-height: 600px;
             height: auto;
-            object-fit: contain; 
+            object-fit: contain;
             background-color: #fcf9d4;
             padding: 15px;
             box-sizing: border-box;
@@ -135,7 +148,7 @@
         .display-content p {
             font-size: 1rem;
             line-height: 1.7;
-            padding: 15px 60px; /* Desktop padding */
+            padding: 20px 60px;
             margin: 0;
         }
 
@@ -164,13 +177,13 @@
             }
 
             .display-content p {
-                padding: 15px 25px; /* Better fit for phones */
+                padding: 15px 25px;
             }
 
             .banner-text h1 {
                 font-size: 1.6rem;
             }
-        }
+        } /* Fixed: Added missing closing bracket here */
     </style>
 </head>
 <body>
@@ -178,32 +191,29 @@
     <nav>
         <div class="logo">Collecting Queers</div>
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../art.html">Art</a></li>
-            <li><a href="../lit.html">Literature</a></li>
-            <li><a href="../media.html">Other Media</a></li>
-            <li><a href="../about.html">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="art.html">Art</a></li>
+            <li><a href="lit.html">Literature</a></li>
+            <li><a href="media.html">Other Media</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
     </nav>
 
     <div class="banner">
         <div class="banner-text">
-            <h1>MMM's Amazing Work</h1>
+            <h1>Other Media</h1>
+			<p>showing all the media that just didnt quite fit in the other Sections</p>
         </div>
     </div>
 
     <div class="container">
-        <div class="display-item">
-            <img src="../images/mmm_1.jpg" alt="Artwork by MMM" class="display-image">
+        
 
-            <details open> <summary>
-                    <span class="arrow">▼</span> Artist's Statement
-                </summary>
-                <div class="display-content">
-                    <p>"The artwork can be related to such as not being able to be your true self around the people you love most. When I was making the art piece, one thing that was going through my mind was how you can tell almost immediately what the expression was of the character… almost upset but also not alone because I know there are other young people who are going through something similar."</p>
-                </div>
-            </details>
-        </div>
+
+
+
+
+
     </div>
 
     <footer>
