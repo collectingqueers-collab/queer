@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artwork - Collecting Queers</title>
+    <style>
+        /* CSS Variables for easy color changes */
+        :root {
+            --pale-yellow: #fdfae5;
+            --accent-yellow: #f0e68c;
+            --text-color: #4a4a4a;
+            --white: #ffffff;
+            --gold: #d4c84d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--pale-yellow);
+            color: var(--text-color);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* Banner Section */
+        .banner {
+            width: 100%;
+            min-height: 250px;
+            background-color: var(--accent-yellow);
+            background-image: url('https://via.placeholder.com/1600x400'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .banner-text {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px 30px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        /* Content Grid */
+        .container {
+            max-width: 1000px;
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        /* Artwork Display Item */
+        .display-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+        }
+
+        .display-image {
+            display: block;
+            width: 100%;
+            max-height: 500px; /* Limits size on desktop */
+            height: auto;
+            object-fit: contain; 
+            background-color: #fcf9d4; /* Matches the theme slightly more softly */
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+
+
+
+        /* Details Section */
+        summary {
+            list-style: none;
+            cursor: pointer;
+            text-align: center;
+            padding: 15px;
+            color: #b8a91a;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+
+        .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        details[open] .arrow {
+            transform: rotate(180deg);
+        }
+
+        .display-content p {
+            font-size: 1rem;
+            line-height: 1.7;
+            padding: 10px 60px; /* Desktop padding */
+            margin: 0;
+        }
+
+        /* Responsive Button */
+        .button {
+            background-color: #FFC300;
+            text-align: center;
+            border-radius: 10px;
+            width: fit-content;
+            min-width: 150px;
+            margin: 20px auto;
+            transition: background 0.3s;
+        }
+
+        .button:hover { background-color: #e6b000; }
+
+        .button a {
+            display: block;
+            padding: 12px 25px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        /* --- MOBILE RESPONSIVE QUERIES --- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .container {
+                width: 95%;
+            }
+
+            .display-content p {
+                padding: 10px 20px; /* Much better for small screens */
+            }
+
+            .banner-text h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Collecting Queers</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="art.html">Art</a></li>
+            <li><a href="lit.html">Literature</a></li>
+            <li><a href="media.html">All Media</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <div class="banner-text">
+            <h1>Artwork</h1>
+            <p>See all the artwork made by amazing people and the stories behind them.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="display-item">
+            <img src="images/mmm_1.jpg" alt="Artwork by MMM" class="display-image">
+
+            <details>
+                <summary>
+                    <span class="arrow">▼</span> View Details
+                </summary>
+                <div class="display-content">
+                    <p>"The artwork relates to not being able to be your true self around the people you love most. When I was making this piece, I was thinking about how you can tell almost immediately what the expression of the character was... upset but also not alone, because I know there are other young people going through something similar."</p>
+
+                    <div class="button">
+                        <a href="profiles/mmm.html">View MMM's Profile</a>
+                    </div>
+                </div>
+            </details>
+        </div>
+        
+        </div>
+		
+		
+
+<div class="display-item">
+  <img src="images/leland_3.jpg" alt="Art
+  
+  work" class="display-image">
+
+  <details>
+    <summary>
+      <span class="arrow">▼</span> View Details
+    </summary>
+    <div class="display-content">
+      <p>"I based this off of me when I was still a child and about 6 years old.
+	 <br><br>
+	 My school had this patch of grass where I'd enjoy playing and sitting down by myself. Because of my eccentricity, I had a friend count of only one, and we would have lunch together sometimes, but I think that day, she had something else to do, so I spent the rest of lunch by myself after eating.
+<br><br>
+I just wanted to see myself happy, I think. Which is why I drew this. I don't remember much of my elementary years except for the humiliating parts, so I liked a reminder of one of my more peaceful moments."
+</p>
+
+<div class="button">
+<a href="profiles/leland.html">Leland</a>
+</div>
+    </div>
+	
+	
+	<div class="container">
+        
+        <div class="display-item">
+            <img src="../images/ashton.png" alt="Childhood Memory Artwork" class="display-image">
+
+            <details open>
+                <summary>
+                    <span class="arrow">▼</span> View Story
+                </summary>
+                <div class="display-content">
+                    <p>"I drew this to kind of put on paper how I feel with my gender, even though I've gotten to a point where I'm happy with how I look and what I identify as, some days it all comes back and I'm unsure if the person I am is the person everyone else sees, and it's a stupid and shitty drawing, but so is life and if i have to put up with it so do you.."</p>
+                </div>
+            </details>
+        </div>
+	
+	
+	
+  </details>
+</div>
+
+<div class="display-item">
+  <img src="images/leland_1.png" alt="Artwork" class="display-image">
+
+  <details>
+    <summary>
+      <span class="arrow">▼</span> View Details
+    </summary>
+    <div class="display-content">
+      <p>“The artwork does mean quite a bit to me since I made it at not the best time in my life, and it's a reminder for me of those moments.<br>
+<br>
+I remembered the phrase "art should comfort the disturbed and disturb the comfortable." Then I wondered if I made a character based entirely on it whenever I felt tired of myself, so this girl in a straitjacket was born with a design, and then I drew her in a way that looked like she was in perpetual pain.<br>
+<br>
+I chose to give her a straitjacket because, well, she's in a psychiatric hospital of some sort and needing to be restrained. I wanted to make it look as uncomfortable as possible, and gave her a weird mechanism on her head which forces her mouth open.<br>
+<br>
+Some people hate going to the dentist, and I've even met some that hate the thought of teeth in general. I guess I wanted to simulate the distress of seeing gums and teeth and a mouth stretched wide<br>
+<br>
+I imagine what my life would be if I were to ever be the one restrained in the straitjacket, and even imagined myself as said 'girl in straitjacket' at times while drawing her. Now that I'm in what could objectively be considered a "better state of mind" by other people, I haven't drawn the girl as much as I did, and haven't been thinking of scenarios where I am her.”
+
+</p>
+
+<div class="button">
+<a href="profiles/leland.html">Leiand</a>
+</div>
+    </div>
+	</div>
+
+    <footer>
+        made with love, thank you all - Avery & Ashton
+    </footer>
+
+</body>
+</html>

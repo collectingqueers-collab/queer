@@ -1,0 +1,19 @@
+<div class="display-item">
+<br>
+  <h2>Title</h2>
+  <p>By name</p>
+
+  <details>
+    <summary>
+      <span class="arrow">▼</span> View Details
+    </summary>
+    <div class="display-content">
+      <p style="border: 3spx solid yellow;"> </p>
+
+
+<div class="button">
+<a href="profiles/avery_s.html">Avery Stridgen</a>
+</div>
+    </div>
+  </details>
+</div>

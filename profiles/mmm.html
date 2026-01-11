@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMM - Collecting Queers</title>
+    <style>
+        /* CSS Variables for easy color changes */
+        :root {
+            --pale-yellow: #fdfae5;
+            --accent-yellow: #f0e68c;
+            --text-color: #4a4a4a;
+            --white: #ffffff;
+            --gold: #d4c84d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--pale-yellow);
+            color: var(--text-color);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* Banner Section */
+        .banner {
+            width: 100%;
+            min-height: 200px;
+            background-color: var(--accent-yellow);
+            background-image: url('https://via.placeholder.com/1600x400'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .banner-text {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px 40px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 900px;
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        /* Profile Item Box */
+        .display-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        .display-image {
+            display: block;
+            width: 100%;
+            max-height: 550px; /* Limits height on big screens */
+            height: auto;
+            object-fit: contain; 
+            background-color: #fcf9d4;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        /* Details / Artist Statement */
+        summary {
+            list-style: none;
+            cursor: pointer;
+            text-align: center;
+            padding: 15px;
+            color: #b8a91a;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-top: 1px solid #f9f9f9;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+
+        .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        details[open] .arrow {
+            transform: rotate(180deg);
+        }
+
+        .display-content p {
+            font-size: 1rem;
+            line-height: 1.7;
+            padding: 15px 60px; /* Desktop padding */
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        /* --- MOBILE RESPONSIVE QUERIES --- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .display-content p {
+                padding: 15px 25px; /* Better fit for phones */
+            }
+
+            .banner-text h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Collecting Queers</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../art.html">Art</a></li>
+            <li><a href="../lit.html">Literature</a></li>
+            <li><a href="../media.html">All Media</a></li>
+            <li><a href="../about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <div class="banner-text">
+            <h1>MMM's Amazing Work</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="display-item">
+            <img src="../images/mmm_1.jpg" alt="Artwork by MMM" class="display-image">
+
+            <details open> <summary>
+                    <span class="arrow">▼</span> Artist's Statement
+                </summary>
+                <div class="display-content">
+                    <p>"The artwork can be related to such as not being able to be your true self around the people you love most. When I was making the art piece, one thing that was going through my mind was how you can tell almost immediately what the expression was of the character… almost upset but also not alone because I know there are other young people who are going through something similar."</p>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <footer>
+        made with love, thank you all - Avery & Ashton
+    </footer>
+
+</body>
+</html>

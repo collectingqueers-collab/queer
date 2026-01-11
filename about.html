@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Collecting Queers</title>
+    <style>
+        /* CSS Variables for easy color changes */
+        :root {
+            --pale-yellow: #fdfae5;
+            --accent-yellow: #f0e68c;
+            --text-color: #4a4a4a;
+            --white: #ffffff;
+            --gold: #d4c84d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--pale-yellow);
+            color: var(--text-color);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* Banner Section */
+        .banner {
+            width: 100%;
+            min-height: 250px;
+            background-color: var(--accent-yellow);
+            background-image: url('https://via.placeholder.com/1600x400'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .banner-text {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px 30px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 900px; /* Limits width on desktop for readability */
+            width: 95%; /* Takes up most of the screen on mobile */
+            margin: 40px auto;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 40px; /* Default desktop padding */
+        }
+
+        h3, h4 {
+            margin: 20px 0 10px 0;
+            color: #b8a91a;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        /* --- MOBILE RESPONSIVE QUERIES --- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .gallery-item {
+                padding: 20px; /* Less padding so text isn't squashed */
+            }
+
+            .banner-text h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Collecting Queers</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="art.html">Art</a></li>
+            <li><a href="lit.html">Literature</a></li>
+            <li><a href="media.html">All Media</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <div class="banner-text">
+            <h1>About Us</h1>
+            <p>Learn all about why we made this collection and how to submit media if you so wish &lt;3</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="gallery-item">
+            <div class="gallery-content">
+                <h3>Why have we made this website?</h3>
+                <p>We created this space because every queer young person deserves to see their own experiences reflected in art and stories. By providing a platform for our voices, we are building a community where we can celebrate our identities, support each other’s growth, and prove that our stories matter.</p> 
+                <p>We hope to provide a plethora of stories for young queer people to see so they might see themselves in the work and not feel alone. Everyone's story is different, but every story might light a spark of hope in someone's life, and for that, we are grateful to be able to help.</p>
+
+                <h3>How do I submit an entry/Contact you?</h3>
+                <p>To submit an entry, you should contact us via email or Instagram (stated below). If you are going to submit an entry, we ask that you please follow this criteria:</p>
+
+                <ul>
+                    <li>You can submit any artwork, piece of literature, or even photography. We accept any form of expression; we just ask that you write a short paragraph about how it relates to your identity or story.</li>
+                    <li>Please make sure not to add any personal details that you don't want to be public, such as addresses or private info.</li>
+                    <li>Please state if you want to remain anonymous; we will happily accept a pen name to keep your privacy intact.</li>
+                    <li>Last of all, we ask you to be respectful of everyone's identity. This is a place for everyone to feel welcome.</li>
+                </ul>
+
+                <h3>Our Contact Information</h3>
+                <h4>Instagram</h4>
+                <p>@collecting_queers</p>
+                <h4>Our Email</h4>
+                <p>CollectingQueers@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        made with love, thank you all - Avery & Ashton
+    </footer>
+
+</body>
+</html>

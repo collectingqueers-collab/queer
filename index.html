@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collecting Queers</title>
+    <style>
+        /* CSS Variables for easy color changes */
+        :root {
+            --pale-yellow: #fdfae5;
+            --accent-yellow: #f0e68c;
+            --text-color: #4a4a4a;
+            --white: #ffffff;
+            --gold: #d4c84d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--pale-yellow);
+            color: var(--text-color);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+
+        /* Banner Section */
+        .banner {
+            width: 100%;
+            min-height: 300px; /* Changed from height to min-height */
+            background-color: var(--accent-yellow);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px; /* Added padding for mobile */
+            box-sizing: border-box;
+        }
+
+        .banner-text {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px 30px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        /* Gallery Grid */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            /* Modern responsive grid: automatically wraps items */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9; /* Keeps images consistent without distortion */
+            background-color: #eee;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-content h3 {
+            margin-top: 0;
+            color: #b8a91a;
+        }
+
+        .gallery-content p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Buttons */
+        .button {
+            background-color: #FFC300;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: auto; /* Pushes button to bottom of card */
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #e6b000;
+        }
+
+        .button a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* --- MOBILE RESPONSIVE QUERIES --- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1.5rem 1rem;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .banner-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr; /* Single column on phones */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Collecting Queers</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="art.html">Art</a></li>
+            <li><a href="lit.html">Literature</a></li>
+            <li><a href="media.html">All Media</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <div class="banner-text">
+            <h1>Queer Art</h1>
+            <p><strong>By Queer Youths, For Queer Youths</strong></p>
+            <p>Please note this website is still under development and not all pages are complete. We are working hard to finish soon—thank you for your support!</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="gallery-grid">
+           
+            <div class="gallery-item">
+                <img src="images/aven_1.jpg" alt="Artwork" class="gallery-image">
+                <div class="gallery-content">
+                    <h3>Artwork</h3>
+                    <p>Explore drawings, paintings, and other works that represent our stories, identities, and expressions.</p>
+                    <div class="button">
+                        <a href="art.html">View Art</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/lit.jpg" alt="Literature" class="gallery-image">
+                <div class="gallery-content">
+                    <h3>Literature</h3>
+                    <p>Read poems, prose, and written works reflecting the unique experiences of the queer community.</p>
+                    <div class="button">
+                        <a href="lit.html">View Literature</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/leland_3.jpg" alt="All Media" class="gallery-image">
+                <div class="gallery-content">
+                    <h3>All Media</h3>
+                    <p>See the full collection and explore everything we have to offer across all creative mediums.</p>
+                    <div class="button">
+                        <a href="media.html">Explore All</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        Made with love, thank you all — Avery & Ashton
+    </footer>
+
+</body>
+</html>

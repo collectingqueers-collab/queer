@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leiand</title>
+    <style>
+        /* CSS Variables for easy color changes */
+        :root {
+            --pale-yellow: #fdfae5;
+            --accent-yellow: #f0e68c;
+            --text-color: #4a4a4a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--pale-yellow);
+            color: var(--text-color);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #d4c84d;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* Banner Section */
+        .banner {
+            width: 100%;
+            height: 300px;
+            background-color: var(--accent-yellow);
+            background-image: url('https://via.placeholder.com/1600x400'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner-text {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Gallery Grid */
+        .container {
+		    width: 80%;
+            margin: auto;
+            padding: 0 20px;
+			
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h3 {
+            margin:auto;
+			padding: 10px;
+			padding-left: 60px;
+            color: #b8a91a;
+        }
+		
+		h4 {
+            margin:auto;
+			padding: 10px;
+			padding-left: 60px;
+            color: #b8a91a;
+			}
+
+        p {
+		    margin: auto;
+			padding: 10px;
+			padding-left: 60px;
+            padding-right: 60px;			
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+            .gallery-item ul {
+		    margin: auto;
+			padding: 10px;
+			padding-right: 60px;	
+			padding-left: 60px;   
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+		
+		
+		
+		
+		
+		
+		
+		
+summary {
+    list-style: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    color: #b8a91a;
+    font-weight: bold;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* The Arrow Animation */
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+details[open] .arrow {
+    transform: rotate(180deg); /* Flips the arrow when open */
+}
+
+/* The Content Box */
+.display-item {
+padding-top:20px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.display-image {
+    display: flex;
+    width: 100%;
+    height: 350px;
+    object-fit: contain; 
+    background-color: #f0e680;
+}
+
+.display-item h3 {
+            margin-top: 0;
+			padding-left: 60px;
+            color: #b8a91a;
+        }
+
+.display-item p {
+            font-size: 0.95rem;
+			padding-left: 60px;
+            line-height: 1.6;
+        }
+
+.display-image {
+    padding: 10px; 
+}
+		
+		
+		
+		.button {
+		       color: black;
+			   background-color: #FFC300;
+			   text-align: center;
+			   border-radius: 10px;
+			   max-width: 50%;
+			   margin: auto;
+			   padding-top: 10px;
+			   padding-bottom: 10px;
+			   margin-bottom: 10px;
+			   
+			   }
+	    .button a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+		
+		
+		
+		
+		
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Collecting Queers</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../art.html">Art</a></li>
+			<li><a href="../lit.html">Literature</a></li>
+			<li><a href="../media.html">All Media</a></li>
+            <li><a href="../about.htm">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <div class="banner-text">
+			<h1>  NAMES  Amazing Work</h1>
+        </div>
+    </div>
+
+
+<div class="display-item">
+  <img src="../images/ " alt="Artwork" class="display-image">
+
+  <details>
+    <summary>
+      <span class="arrow">▼</span> View Details
+    </summary>
+    <div class="display-content">
+      <p></p>
+    </div>
+  </details>
+</div>
+
+
+    <footer>
+        made with love, thank you all - Avery & Ashton
+    </footer>
+
+</body>
+</html>

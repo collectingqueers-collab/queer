@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* 1. Hide the checkbox so it doesn't look messy */
+  #language-toggle {
+    display: none;
+  }
+
+  /* 2. Styling the button */
+  .toggle-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: sans-serif;
+    user-select: none;
+  }
+
+  /* 3. Logic: Show/Hide the poems */
+  .english-version {
+    display: none; /* English is hidden by default */
+  }
+
+  /* When the checkbox is checked, swap visibility */
+  #language-toggle:checked ~ .welsh-version {
+    display: none;
+  }
+
+  #language-toggle:checked ~ .english-version {
+    display: block;
+  }
+
+  /* Optional: Change button color when toggled */
+  #language-toggle:checked ~ .toggle-btn {
+    background-color: #28a745;
+  }
+</style>
+</head>
+<body>
+
+  <input type="checkbox" id="language-toggle">
+
+  <label for="language-toggle" class="toggle-btn">Click to Switch Language</label>
+
+  <hr>
+
+  <div class="welsh-version">
+    <h3>Cymraeg (Welsh)</h3>
+    <p>O goedwig ddryslud fy amheuaeth,<br>
+    Dan ganopi cysgodol...</p>
+  </div>
+
+  <div class="english-version">
+    <h3>English</h3>
+    <p>From the tangled forest of my doubt,<br>
+    Beneath a shadowy canopy...</p>
+  </div>
+
+</body>
+</html>

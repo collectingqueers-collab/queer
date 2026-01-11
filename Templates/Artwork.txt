@@ -1,0 +1,14 @@
+<div class="display-item">
+  <img src="images/image" alt="Artwork" class="display-image">
+
+  <details>
+    <summary>
+      <span class="arrow">▼</span> View Details
+    </summary>
+    <div class="display-content">
+      <p></p>
+
+<div class="button">
+<a href="profiles/name.html">name</a>
+</div>
+    </div>

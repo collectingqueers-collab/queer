@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aven - Collecting Queers</title>
+    <style>
+        /* CSS Variables for easy color changes */
+        :root {
+            --pale-yellow: #fdfae5;
+            --accent-yellow: #f0e68c;
+            --text-color: #4a4a4a;
+            --white: #ffffff;
+            --gold: #d4c84d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--pale-yellow);
+            color: var(--text-color);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* Banner Section */
+        .banner {
+            width: 100%;
+            min-height: 250px;
+            background-color: var(--accent-yellow);
+            background-image: url('https://via.placeholder.com/1600x400'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .banner-text {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px 30px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        /* Content Grid */
+        .container {
+            max-width: 900px;
+            width: 92%;
+            margin: 40px auto;
+        }
+
+        /* Literature Display Item */
+        .display-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            padding: 30px 0;
+        }
+
+        .display-item h2 {
+            margin: 0;
+            color: #b8a91a;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .display-item p.author-tag {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        /* Details Section */
+        summary {
+            list-style: none;
+            cursor: pointer;
+            text-align: center;
+            padding: 15px;
+            color: #b8a91a;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-top: 1px solid #eee;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+
+        .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        details[open] .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Poem Formatting */
+        .display-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            padding: 20px 60px; /* Desktop Padding */
+            margin: 0;
+        }
+
+        /* --- UPDATED LANGUAGE TOGGLE LOGIC --- */
+        input[type="checkbox"][id^="lang-toggle"] {
+            display: none;
+        }
+
+        .english-version {
+            display: none;
+        }
+
+        /* If any checkbox starting with 'lang-toggle' is checked, flip visibility */
+        input[type="checkbox"][id^="lang-toggle"]:checked ~ .welsh-version {
+            display: none;
+        }
+
+        input[type="checkbox"][id^="lang-toggle"]:checked ~ .english-version {
+            display: block;
+        }
+
+        .toggle-label {
+            display: block;
+            width: fit-content;
+            margin: 10px auto 20px auto;
+            padding: 10px 25px;
+            background-color: var(--accent-yellow);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+        }
+
+        .toggle-label:hover {
+            background-color: #fce300;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Button */
+        .button {
+            background-color: #FFC300;
+            text-align: center;
+            border-radius: 10px;
+            width: fit-content;
+            min-width: 180px;
+            margin: 30px auto 10px auto;
+            transition: background 0.3s;
+        }
+
+        .button:hover { background-color: #e6b000; }
+
+        .button a {
+            display: block;
+            padding: 12px 25px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        /* --- MOBILE RESPONSIVE QUERIES --- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .display-content p {
+                padding: 20px 25px;
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            .display-item h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Collecting Queers</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../art.html">Art</a></li>
+            <li><a href="../lit.html">Literature</a></li>
+            <li><a href="../media.html">All Media</a></li>
+            <li><a href="../about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <div class="banner-text">
+            <h1>Aven</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="display-item">
+            <h2>Geiriau Newydd / New Words</h2>
+            <p class="author-tag">By Aven</p>
+
+            <details>
+                <summary>
+                    <span class="arrow">▼</span> View Poem
+                </summary>
+                <div class="display-content">
+                    
+                    <input type="checkbox" id="lang-toggle-1">
+                    <label for="lang-toggle-1" class="toggle-label">Switch to English / Cymraeg</label>
+
+                    <div class="welsh-version">
+                        <p>
+                            O goedwig ddryslud fy amheuaeth,<br>Dan ganopi cysgodol,<br>Disgynodd had fy hunaniaeth<br>A wreiddiodd addewid gobeithiol.<br><br>
+                            Nid hunaniaeth coll oedd hi, ond –<br>Wedi'i thagu gan chwyn aflonyddwch.<br>Dim lle i dyfu fel y dylai,<br>Na heulwen i oleuo’r tywyllwch.<br><br>
+                            But in the waking of the dawn,<br>
+                            Treiddwyd y nôs lluchddu,<br>Ac o dân fy ninistr<br>Llosgwyd lle i’r had dyfu.<br><br>
+                            Lle bu tawelwch fy siom,<br>Clywaf adlais alaw cyfarwydd –<br>Tyfodd o’r had cuddiedig<br>Geiriau newydd i’r un hen gân.<br><br>
+                            Teimlaf enaid fy ngwir hun<br>Yn symffoni fy adnabyddiaeth – <br>Awel cysurus ar groen creithiog<br>Yw geiriau canfyddedig fy hunaniaeth.
+                        </p>
+                    </div>
+
+                    <div class="english-version">
+                        <p>
+                            From the tangled forest of my doubt,<br>
+                            Beneath a shadowy canopy,<br>
+                            The seed of my identity fell<br>
+                            And rooted a hopeful promise.<br><br>
+                            It was not a lost identity, but –<br>
+                            Choked by the weeds of unrest.<br>
+                            No place to grow as it should,<br>
+                            Nor sunshine to light the darkness.<br><br>
+                            But in the waking of the dawn,<br>
+                            The jet-black night was pierced,<br>
+                            And from the fire of my destruction<br>
+                            A place was burned for the seed to grow.<br><br>
+                            Where there was the silence of my disappointment,<br>
+                            I hear the echo of a familiar melody –<br>
+                            From the hidden seed grew<br>
+                            New words to the same old song.<br><br>
+                            I feel the soul of my true self<br>
+                            In the symphony of my recognition –<br>
+                            A comforting breeze on scarred skin<br>
+                            Are the perceived words of my identity.
+                        </p>
+                    </div>
+                </div>
+            </details>
+        </div>
+        
+        <div class="display-item">
+            <h2>Geiriau Coll / Lost Words</h2>
+            <p class="author-tag">By Aven</p>
+
+            <details>
+                <summary>
+                    <span class="arrow">▼</span> View Poem
+                </summary>
+                <div class="display-content">
+                    
+                    <input type="checkbox" id="lang-toggle-2">
+                    <label for="lang-toggle-2" class="toggle-label">Switch to English / Cymraeg</label>
+
+                    <div class="welsh-version">
+                        <p>
+                            Anifyr yw'r anwybod <br>
+                            Sut i fy nisgrifo. <br>
+                            Anifyr yw'r diffyg adnabod <br>
+                            Sy'n fy nghaethiwo. <br>
+                            <br>
+                            Unigrwydd, heb dealltwriaeth <br>
+                            Gan fy hunain nag eraill. <br>
+                            Beth yw bod yn unigryw? <br>
+                            Teimlo'n unig, heb cyfaill. <br>
+                            <br>
+                            Yn waeth na'r ddryswch, <br>
+                            Yw'ch geiriau cas am ein cymdeithas. <br>
+                            A'ch geiriau gwag o gefnogaeth: Celwyddion tryoloyw, dibwrpas. <br>
+                            <br>
+                            Yn tawelwch fy siom <br>
+                            Clywaf adlais y geiriau coll <br>
+                            Geiriau derbynniol a chefnogol <br>
+                            Ochenaid breuddwydiol ar y gwynt. <br>
+                            <br>
+                            Yn tawelwch fy syndod <br>
+                            Teimlaf enaid y geiriau coll <br>
+                            Geiriau all fyth cydnabod<br>
+                            Fy hunaniaeth difancoll. 
+                        </p>
+                    </div>
+
+                    <div class="english-version">
+                        <p>
+                            Unsettling is the unknowing <br>
+                            How to describe myself. <br>
+                            Unsettling is the lack of recognition<br>
+                            That enslaves me.<br>
+                            <br>
+                            Loneliness, without understanding<br>
+                            From myself or others. <br>
+                            What is being unique? <br>
+                            Feeling alone, without companionship.<br>
+                            <br>
+                            Worse than the confusion,<br>
+                            Are your nasty words about our society. And your empty words of support: Transparent,<br>
+                            pointless lies.<br>
+                            <br>
+                            In the silence of my disappointment<br>
+                            ,I hear the echo of the lost words. Accepting and supportive words:<br>
+                            A dreamed sigh on the wind.<br>
+                            <br>
+                            In the silence my surprise <br>
+                            I feel the soul of the lost words <br>
+                            Words that can never recognize<br>
+                            My lost identity<br>
+                        </p>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <footer>
+        made with love, thank you all - Avery & Ashton
+    </footer>
+
+</body>
+</html>
