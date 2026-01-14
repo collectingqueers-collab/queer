@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Collecting Queers</title>
+    <title>Instructions - Collecting Queers</title>
     <style>
         /* CSS Variables for easy color changes */
         :root {
@@ -61,7 +61,7 @@
         /* Banner Section */
         .banner {
             width: 100%;
-            min-height: 250px;
+            min-height: 200px;
             background-color: var(--accent-yellow);
             background-image: url('https://via.placeholder.com/1600x400'); 
             background-size: cover;
@@ -96,9 +96,11 @@
             padding: 40px;
         }
 
-        h3, h4 {
-            margin: 20px 0 10px 0;
+        h3 {
+            margin: 0 0 20px 0;
             color: #b8a91a;
+            border-bottom: 2px solid var(--pale-yellow);
+            padding-bottom: 10px;
         }
 
         p, ul {
@@ -108,46 +110,30 @@
         }
 
         ul {
-            padding-left: 20px;
+            padding-left: 25px;
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
-        /* --- BUTTON STYLES --- */
-        .submit-section {
-            text-align: center;
-            margin: 30px 0;
-            padding: 30px;
-            background-color: #fafafa;
-            border-radius: 8px;
-            border: 1px solid #eee;
-        }
-
-        .form-button {
-            display: inline-block;
-            background-color: var(--gold);
-            color: white;
-            padding: 15px 35px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-top: 15px;
-        }
-
-        .form-button:hover {
-            background-color: #b8a91a;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-
-        .instruction-link {
+        .step-number {
             color: var(--gold);
-            text-decoration: underline;
-            font-weight: 600;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: var(--gold);
         }
 
         footer {
@@ -157,30 +143,11 @@
             opacity: 0.7;
         }
 
-        /* --- MOBILE RESPONSIVE QUERIES --- */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                padding: 1rem;
-            }
-
-            nav ul {
-                margin-top: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            nav ul li {
-                margin: 5px 10px;
-            }
-
-            .gallery-item {
-                padding: 20px;
-            }
-
-            .banner-text h1 {
-                font-size: 1.5rem;
-            }
+            nav { flex-direction: column; padding: 1rem; }
+            nav ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
+            nav ul li { margin: 5px 10px; }
+            .gallery-item { padding: 20px; }
         }
     </style>
 </head>
@@ -199,37 +166,30 @@
 
     <div class="banner">
         <div class="banner-text">
-            <h1>About Us</h1>
-            <p>Learn all about why we made this collection and how to share your story with the community &lt;3</p>
+            <h1>Submission Instructions</h1>
+            <p>Guidelines for contributing your work to our community collection.</p>
         </div>
     </div>
 
     <div class="container">
         <div class="gallery-item">
-            <div class="gallery-content">
-                <h3>Why have we made this website?</h3>
-                <p>We created this space because every queer young person deserves to see their own experiences reflected in art and stories. By providing a platform for our voices, we are building a community where we can celebrate our identities, support each other’s growth, and prove that our stories matter.</p> 
-                <p>We hope to provide a plethora of stories for young queer people to see so they might see themselves in the work and not feel alone. Everyone's story is different, but every story might light a spark of hope in someone's life, and for that, we are grateful to be able to help.</p>
+            <h3>How to Prepare Your Entry</h3>
+            
+            <p>To ensure our collection remains a safe and welcoming space for everyone, please follow these guidelines when preparing your submission:</p>
 
-                <h3>Join the Collection</h3>
-                
-                <div class="submit-section">
-                    <p><strong>Ready to start?</strong><br>Make sure you've read our <a href="instructions.html" class="instruction-link">instructions</a>.</p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfPCL4JLZYtYg7IwDJI28cHrBxubu-Q-Op5tNw-Aj_6ctOnPg/viewform?usp=publish-editor" class="form-button">Submit Your Entry</a>
-                </div>
+            <ul>
+                <li><strong><span class="step-number">01.</span> Content Types:</strong> We accept artwork, literature, photography, or any other form of creative expression. There are no strict limits on style!</li>
+                <li><strong><span class="step-number">02.</span> Your Story:</strong> We ask that you include a short paragraph describing how your work relates to your identity or personal story. This helps others connect with your piece.</li>
+                <li><strong><span class="step-number">03.</span> Privacy:</strong> For your safety, please ensure your submission does not contain personal details you aren't comfortable being public (such as home addresses or phone numbers).</li>
+                <li><strong><span class="step-number">04.</span> Anonymity:</strong> If you wish to remain anonymous, please indicate this in the form. We are happy to use a pen name or display it as "Anonymous."</li>
+                <li><strong><span class="step-number">05.</span> Respect:</strong> We maintain a strict policy of respect for all identities. Any work that promotes hate or exclusion will not be accepted.</li>
+            </ul>
 
-                <h3>Our Contact Information</h3>
-                <div style="display: flex; gap: 40px; flex-wrap: wrap;">
-                    <div>
-                        <h4>Instagram</h4>
-                        <p>@collecting_queers</p>
-                    </div>
-                    <div>
-                        <h4>Our Email</h4>
-                        <p>CollectingQueers@gmail.com</p>
-                    </div>
-                </div>
-            </div>
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+
+            <p>Once you are ready, return to the About page to click the submission button, or head straight to our Google Form.</p>
+
+            <a href="about.html" class="back-link">← Back to About Us</a>
         </div>
     </div>
 
