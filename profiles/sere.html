@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sere - Collecting Queers</title>
+    <style>
+        /* CSS Variables for easy color changes */
+        :root {
+            --pale-yellow: #fdfae5;
+            --accent-yellow: #f0e68c;
+            --text-color: #4a4a4a;
+            --white: #ffffff;
+            --gold: #d4c84d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--pale-yellow);
+            color: var(--text-color);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* Banner Section */
+        .banner {
+            width: 100%;
+            min-height: 200px;
+            background-color: var(--accent-yellow);
+            background-image: url('https://via.placeholder.com/1600x400'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .banner-text {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px 40px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 900px;
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        /* Artwork Display Item */
+        .display-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            padding-bottom: 10px;
+        }
+
+        .display-item h2 {
+            margin-top: 20px;
+            text-align: center;
+            color: #b8a91a;
+        }
+
+        .display-item p.author-tag {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        /* Details / Artist Statement */
+        summary {
+            list-style: none;
+            cursor: pointer;
+            text-align: center;
+            padding: 15px;
+            color: #b8a91a;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-top: 1px solid #f9f9f9;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+
+        .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        details[open] .arrow {
+            transform: rotate(180deg);
+        }
+
+        .display-content p {
+            font-size: 1rem;
+            line-height: 1.7;
+            padding: 20px 60px;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        /* --- MOBILE RESPONSIVE QUERIES --- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 5px 10px;
+            }
+            .display-content p {
+                padding: 15px 25px;
+            }
+            .banner-text h1 {
+                font-size: 1.6rem;
+            }
+        } 
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Collecting Queers</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../art.html">Art</a></li>
+            <li><a href="../lit.html">Literature</a></li>
+            <li><a href="../media.html">Other Media</a></li>
+            <li><a href="../about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <div class="banner-text">
+            <h1>Sere's Amazing Work</h1>
+            <p>Any Pronouns</p>
+        </div>
+    </div>
+<div class="display-item">
+            <h2>Love</h2>
+            <p class="author-tag">By Sere</p>
+
+            <details>
+                <summary>
+                    <span class="arrow">▼</span> View Poem
+                </summary>
+                <div class="display-content">
+                    <p>
+                        I like girls.<br>
+                        I think I've always known that, even if I never realised.<br>
+                        I like their smiles, their laughs, their tough softness.<br>
+                        I like them more than anything.<br><br>
+
+                        I also like boys.<br>
+                        Or maybe that's just what society says.<br>
+                        I think I may never know.<br>
+                        But I think I like them.<br><br>
+
+                        I like enbies.<br>
+                        I like how they're not afraid to be themselves<br>
+                        Or even when they are, how they do it anyway.<br>
+                        I will always like them.<br><br>
+
+                        I love people.<br>
+                        Anyone and everyone who lives or has lived.<br>
+                        I love their life, their light, their very being.<br>
+                        I love how they can always find a light in the dark.<br><br>
+
+                        I love love.<br>
+                        How it makes everything feel so warm and fuzzy and nice.<br>
+                        Platonic, romantic, familial, I love it all.<br>
+                        Love is a beautiful thing, regardless of the enactors.<br><br>
+
+                        The only thing I truly hate is society.<br>
+                        How it twists everything beautiful into something hard and painful.<br>
+                        How it worms its way into our minds and makes everything dark and black.<br>
+                        How when people try to be happy, it squashes their joy.<br><br>
+
+                        I hope one day society will be different.<br>
+                        Already there are people lighting up its gloom and cutting through its smog.<br>
+                        I love that hope.<br>
+                        It may not be enough yet, but it will be one day.<br>
+                        And I will love that day with all my heart.
+                    </p>
+
+                </div>
+            </details>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>made with love, thank you all - Polygraph & Ashton</p>
+        <p>© all rights reserved</p> 
+    </footer>
+
+</body>
+</html>

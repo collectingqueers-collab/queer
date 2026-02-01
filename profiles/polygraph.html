@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polygraph - Collecting Queers</title>
+    <style>
+        /* CSS Variables for easy color changes */
+        :root {
+            --pale-yellow: #fdfae5;
+            --accent-yellow: #f0e68c;
+            --text-color: #4a4a4a;
+            --white: #ffffff;
+            --gold: #d4c84d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--pale-yellow);
+            color: var(--text-color);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* Banner Section */
+        .banner {
+            width: 100%;
+            min-height: 200px;
+            background-color: var(--accent-yellow);
+            background-image: url('https://via.placeholder.com/1600x400'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .banner-text {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px 40px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 900px;
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        /* Artwork Display Item */
+        .display-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            padding-bottom: 10px;
+        }
+
+        .display-item h2 {
+            margin-top: 20px;
+            text-align: center;
+            color: #b8a91a;
+        }
+
+        .display-item p.author-tag {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        /* Details / Artist Statement */
+        summary {
+            list-style: none;
+            cursor: pointer;
+            text-align: center;
+            padding: 15px;
+            color: #b8a91a;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-top: 1px solid #f9f9f9;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+
+        .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        details[open] .arrow {
+            transform: rotate(180deg);
+        }
+
+        .display-content p {
+            font-size: 1rem;
+            line-height: 1.7;
+            padding: 20px 60px;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        /* --- MOBILE RESPONSIVE QUERIES --- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 5px 10px;
+            }
+            .display-content p {
+                padding: 15px 25px;
+            }
+            .banner-text h1 {
+                font-size: 1.6rem;
+            }
+        } 
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Collecting Queers</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../art.html">Art</a></li>
+            <li><a href="../lit.html">Literature</a></li>
+            <li><a href="../media.html">Other Media</a></li>
+            <li><a href="../about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <div class="banner-text">
+            <h1>Polygraph's Amazing Work</h1>
+            <p>She/They</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="display-item">
+            <h2>A muse on TV</h2>
+            <p class="author-tag">By Polygraph</p>
+
+            <details>
+                <summary>
+                    <span class="arrow">▼</span> View Poem
+                </summary>
+                <div class="display-content">
+                    <p>
+                        I think I lost my gender<br>
+                        somewhere between<br>
+                        the third repeat of The League of Gentlemen<br>
+                        and my mum shouting<br>
+                        that I’d rot my brain<br>
+                        watching “that rubbish.”<br>
+                        Fair.<br>
+                        Because once you’ve met Royston Vasey,<br>
+                        nothing fits back in the box properly.<br>
+                        I didn’t wake up one day different.<br>
+                        I just woke up<br>
+                        after it all <br>
+                        After the confidence of someone<br>
+                        who didn’t ask permission<br>
+                        to be strange<br>
+                        and never once apologised for it.<br>
+                        Cheers for that Barbara <br><br>
+                        
+                        On BBC Two at an hour meant for ghosts.<br>
+                        People who looked wrong on purpose.<br>
+                        People who didn’t tidy themselves up<br>
+                        to make anyone else comfortable.<br>
+                        And something in me went,<br>
+                        oh.<br>
+                        You can do that?<br>
+                        I think my gender slipped away<br>
+                        during The Mighty Boosh too —<br>
+                        somewhere between Old Gregg<br>
+                        and whatever Noel Fielding was wearing<br>
+                        that week.<br>
+                        When everyone was fluid,<br>
+                        and glittery,<br>
+                        and no one stopped the show<br>
+                        to ask but what are you really?<br>
+                        No panel.<br>
+                        No debate.<br>
+                        Just vibes and chaos<br>
+                        and a bass line.<br>
+                        People act like this stuff is new.<br>
+                        Like we weren’t all raised by television<br>
+                        that actively refused to explain itself.<br>
+                        You can cope with<br>
+                        a small town full of monsters,<br>
+                        blackface nightmares,<br>
+                        and characters who should legally come with warnings —<br>
+                        but someone being a bit ambiguous?<br>
+                        Too far.<br>
+                        Nation in crisis.<br>
+                        Sure.<br>
+                        I tried to find my gender again,<br>
+                        checked the usual places —<br>
+                        school toilets,<br>
+                        PE lessons,<br>
+                        forms with tick boxes that stared back at me<br>
+                        like I’d failed a multiple choice question<br>
+                        on purpose.<br>
+                        Gender used to feel important.<br>
+                        Very serious.<br>
+                        Very GCSE.<br>
+                        Like something you’d revise for<br>
+                        and still get wrong.<br>
+                        Nothing.<br>
+                        Turns out it’d moved<br>
+                        to the weird shelf.<br>
+                        Next to Inside No. 9,<br>
+                        where things don’t explain themselves<br>
+                        and the point only hits you<br>
+                        after it’s already over.<br>
+                        People ask when I “decided.”<br>
+                        As if it was a meeting.<br>
+                        As if I filled out a form<br>
+                        instead of slowly realising<br>
+                        I felt more at home<br>
+                        with characters everyone else called unsettling.<br>
+                        I didn’t lose my gender tragically.<br>
+                        I misplaced it.<br>
+                        Like something you lend someone<br>
+                        and never get back<br>
+                        but don’t really miss<br>
+                        Like a DVD without a case<br>
+                        If anyone does find my gender,<br>
+                        it’s probably in a charity shop <br>
+                        unlabelled,<br>
+                        slightly unsettling,<br>
+                        cult classic.<br>
+                        Like something you lend someone<br>
+                        and never get back<br>
+                        but don’t really miss.
+                    </p>
+                </div>
+            </details>
+        </div>
+
+        <div class="display-item">
+            <h2>What is real?</h2>
+            <p class="author-tag">By Polygraph</p>
+
+            <details>
+                <summary>
+                    <span class="arrow">▼</span> View Poem
+                </summary>
+                <div class="display-content">
+                    <p>
+                        Sometimes I wish I were a real girl<br>
+                        and I hate myself a little<br>
+                        for even thinking the word real.<br>
+                        Because I know the negatives.<br>
+                        I’ve memorised them.<br>
+                        Pain. Fear. Being talked over.<br>
+                        Being watched like you owe the world softness.<br>
+                        I recite them like a warning label<br>
+                        to stop myself wanting it.<br>
+                        It doesn’t work.<br>
+                        Some days I look in the mirror<br>
+                        and it’s fine.<br>
+                        I shrug.<br>
+                        I survive.<br>
+                        I exist without flinching.<br>
+                        Other days—<br>
+                        I can’t meet my own eyes.<br>
+                        The reflection feels like a draft version.<br>
+                        Like someone clicked “save as”<br>
+                        before it was finished.<br>
+                        Everyone says girlhood is pain anyway.<br>
+                        Periods and fear and walking home<br>
+                        with keys between your fingers.<br>
+                        Being told to smile.<br>
+                        Being told to shrink.<br>
+                        And I know that.<br>
+                        I know that.<br>
+                        I list the negatives like revision notes<br>
+                        to convince myself<br>
+                        I don’t want it that badly.<br>
+                        But knowing something hurts<br>
+                        doesn’t stop you wanting it.<br>
+                        Fuck Marc.<br>
+                        I don’t want some perfect version.<br>
+                        I don’t want soft-focus Instagram girlhood.<br>
+                        I want the stupid bits.<br>
+                        The embarrassing bits.<br>
+                        The standing in a bathroom at a party<br>
+                        fixing someone’s eyeliner while crying<br>
+                        for reasons that don’t make sense.<br>
+                        I want to look at my reflection<br>
+                        and not feel like I’m borrowing it.<br>
+                        Some days I almost see her.<br>
+                        Like she’s buffering.<br>
+                        Like the screen’s frozen<br>
+                        just before it loads properly.<br>
+                        And other days—<br>
+                        god—<br>
+                        other days I can’t stand my reflection.<br>
+                        I tilt my head.<br>
+                        I pull a face.<br>
+                        I tell myself it’s fine.<br>
+                        I tell myself I’m being dramatic.<br>
+                        And yeah—<br>
+                        sometimes I’m okay.<br>
+                        Sometimes I forget.<br>
+                        Sometimes I laugh and exist<br>
+                        and it doesn’t hurt at all.<br>
+                        And that almost makes it worse.<br>
+                        Because it proves it’s not constant.<br>
+                        It’s not dramatic enough to explain.<br>
+                        It just sneaks up on me<br>
+                        in shop windows,<br>
+                        bathroom mirrors,<br>
+                        photos I didn’t know were being taken.<br>
+                        I wish I were a real girl<br>
+                        in the quiet way you wish for things<br>
+                        you don’t say out loud<br>
+                        because saying them<br>
+                        makes them heavier.
+                    </p>
+                </div>
+            </details>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>made with love, thank you all - Polygraph & Ashton</p>
+        <p>© all rights reserved</p> 
+    </footer>
+
+</body>
+</html>
